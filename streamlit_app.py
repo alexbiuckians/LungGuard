@@ -571,6 +571,8 @@ with tab_pred:
  
     else:
         prob = float(model.predict_proba(X_input)[0][1])
+        if input_dict['smoker'] == 0 and input_dict['pack_years'] == 0:
+            prob = min(prob, 0.25)
         tier, css, color, action = get_tier(prob)
         st.session_state["last_prob"] = prob 
 
