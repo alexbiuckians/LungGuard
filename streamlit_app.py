@@ -312,7 +312,7 @@ div[data-testid="metric-container"] {
 """, unsafe_allow_html=True)
  
 # ── File paths ─────────────────────────────────────────────────────────────────
-MODEL_DIR      = os.path.join(os.path.dirname(__file__), "model")
+MODEL_DIR      = os.path.join(os.path.dirname(__file__), "app", "model")
 MODEL_PATH     = os.path.join(MODEL_DIR, "final_model.pkl")
 EXPLAINER_PATH = os.path.join(MODEL_DIR, "shap_explainer.pkl")
 META_PATH      = os.path.join(MODEL_DIR, "feature_meta.json")
