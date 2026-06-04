@@ -1,0 +1,164 @@
+{
+  "age": {
+    "min": 18,
+    "max": 90,
+    "default": 55,
+    "binary": false
+  },
+  "gender": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "education_years": {
+    "min": 5,
+    "max": 20,
+    "default": 11,
+    "binary": false
+  },
+  "income_level": {
+    "min": 1,
+    "max": 5,
+    "default": 3,
+    "binary": false
+  },
+  "smoker": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "pack_years": {
+    "min": 0,
+    "max": 60,
+    "default": 0,
+    "binary": false
+  },
+  "passive_smoking": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "air_pollution_index": {
+    "min": 20,
+    "max": 130,
+    "default": 64,
+    "binary": false
+  },
+  "occupational_exposure": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "radon_exposure": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "family_history_cancer": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "copd": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "asthma": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "previous_tb": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "chronic_cough": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "chest_pain": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "shortness_of_breath": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "fatigue": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "bmi": {
+    "min": 16,
+    "max": 37,
+    "default": 24,
+    "binary": false
+  },
+  "oxygen_saturation": {
+    "min": 85,
+    "max": 100,
+    "default": 97,
+    "binary": false
+  },
+  "fev1_x10": {
+    "min": 5,
+    "max": 37,
+    "default": 33,
+    "binary": false
+  },
+  "crp_level": {
+    "min": 0,
+    "max": 33,
+    "default": 3,
+    "binary": false
+  },
+  "xray_abnormal": {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "binary": true
+  },
+  "exercise_hours_per_week": {
+    "min": 0,
+    "max": 10,
+    "default": 2,
+    "binary": false
+  },
+  "diet_quality": {
+    "min": 1,
+    "max": 5,
+    "default": 3,
+    "binary": false
+  },
+  "alcohol_units_per_week": {
+    "min": 0,
+    "max": 23,
+    "default": 6,
+    "binary": false
+  },
+  "healthcare_access": {
+    "min": 1,
+    "max": 5,
+    "default": 3,
+    "binary": false
+  }
+}
