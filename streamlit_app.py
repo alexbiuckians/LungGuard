@@ -399,9 +399,9 @@ SAMPLE_PATIENTS = {
         "income_level": 2,
     },
     "🟡 Moderate-Risk Smoker (48M)": {
-        "age": 48, "gender": 1, "smoker": 1,
-        "pack_years": 6, "passive_smoking": 0,
-        "air_pollution_index": 45, "radon_exposure": 0, "occupational_exposure": 0,
+        "age": 44, "gender": 1, "smoker": 1,
+        "pack_years": 4, "passive_smoking": 0,
+        "air_pollution_index": 35, "radon_exposure": 0, "occupational_exposure": 0,
         "family_history_cancer": 0, "copd": 0, "asthma": 0, "previous_tb": 0,
         "chronic_cough": 0, "chest_pain": 0, "shortness_of_breath": 0, "fatigue": 1,
         "xray_abnormal": 0, "bmi": 27, "oxygen_saturation": 96, "fev1_x10": 32,
