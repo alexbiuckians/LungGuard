@@ -388,8 +388,8 @@ fairness_df, equity_gaps = load_fairness_data()
 SAMPLE_PATIENTS = {
     "— Select a sample patient —": None,
     "🔴 High-Risk Smoker (65M)": {
-        "age": 65, "gender": 1, "smoker": 1, "smoking_years": 35,
-        "cigarettes_per_day": 25, "pack_years": 44, "passive_smoking": 0,
+        "age": 65, "gender": 1, "smoker": 1,
+        "pack_years": 44, "passive_smoking": 0,
         "air_pollution_index": 95, "radon_exposure": 1, "occupational_exposure": 1,
         "family_history_cancer": 1, "copd": 1, "asthma": 0, "previous_tb": 0,
         "chronic_cough": 1, "chest_pain": 1, "shortness_of_breath": 1, "fatigue": 1,
@@ -399,8 +399,8 @@ SAMPLE_PATIENTS = {
         "income_level": 2,
     },
     "🟡 Moderate-Risk Smoker (52M)": {
-        "age": 52, "gender": 1, "smoker": 1, "smoking_years": 20,
-        "cigarettes_per_day": 10, "pack_years": 10, "passive_smoking": 1,
+        "age": 52, "gender": 1, "smoker": 1,
+        "pack_years": 10, "passive_smoking": 1,
         "air_pollution_index": 75, "radon_exposure": 0, "occupational_exposure": 0,
         "family_history_cancer": 0, "copd": 0, "asthma": 1, "previous_tb": 0,
         "chronic_cough": 1, "chest_pain": 0, "shortness_of_breath": 0, "fatigue": 1,
@@ -410,8 +410,8 @@ SAMPLE_PATIENTS = {
         "income_level": 3,
     },
     "🟢 Low-Risk Healthy (35F)": {
-        "age": 35, "gender": 0, "smoker": 0, "smoking_years": 0,
-        "cigarettes_per_day": 0, "pack_years": 0, "passive_smoking": 0,
+        "age": 35, "gender": 0, "smoker": 0,
+        "pack_years": 0, "passive_smoking": 0,
         "air_pollution_index": 30, "radon_exposure": 0, "occupational_exposure": 0,
         "family_history_cancer": 0, "copd": 0, "asthma": 0, "previous_tb": 0,
         "chronic_cough": 0, "chest_pain": 0, "shortness_of_breath": 0, "fatigue": 0,
