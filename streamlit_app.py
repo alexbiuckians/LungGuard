@@ -566,6 +566,9 @@ with tab_pred:
         </div>""", unsafe_allow_html=True)
  
     else:
+        if input_dict['smoker'] == 1 and input_dict['pack_years'] == 0:
+            st.warning("⚠️ Invalid: A current/former smoker must have pack-years > 0. Please adjust.")
+            st.stop()
         prob = float(model.predict_proba(X_input)[0][1])
 
         # Only keep the non-smoker cap — this is clinically defensible
