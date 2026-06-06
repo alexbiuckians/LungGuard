@@ -569,8 +569,14 @@ with tab_pred:
         prob = float(model.predict_proba(X_input)[0][1])
         if input_dict['smoker'] == 0 and input_dict['pack_years'] == 0:
             prob = min(prob, 0.25)
-        if input_dict['smoker'] == 1 and input_dict['pack_years'] < 10:
-            prob = min(prob, 0.65)
+        if input_dict['smoker'] == 1:
+            pack_years_val = input_dict['pack_years']
+            if pack_years_val < 10:
+                 prob = min(prob, 0.65)
+            elif pack_years_val < 20:
+                 prob = min(prob, 0.78)
+            elif pack_years_val < 30:
+                 prob = min(prob, 0.88)
         tier, css, color, action = get_tier(prob)
         st.session_state["last_prob"] = prob 
 
