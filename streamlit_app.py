@@ -444,8 +444,6 @@ with st.sidebar:
     with st.expander("🚬 Smoking History", expanded=True):
         smoker             = st.toggle("Current/Former Smoker", value=bool(sv("smoker", 0)))
         smoker_val         = int(smoker)
-        smoking_years      = st.slider("Smoking Years", 0, 60, sv("smoking_years", 0), disabled=not smoker)
-        cigarettes_per_day = st.slider("Cigarettes per Day", 0, 40, sv("cigarettes_per_day", 0), disabled=not smoker)
         pack_years         = st.slider("Pack-Years", 0, 60, sv("pack_years", 0), disabled=not smoker)
         passive            = st.toggle("Passive Smoking Exposure", value=bool(sv("passive_smoking", 0)))
  
