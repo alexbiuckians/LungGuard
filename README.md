@@ -52,7 +52,7 @@ No usability testing, workflow integration study, or clinical review has been co
 ## Risk Stratification Logic
 
 ```python
-if risk_score > 0.75:
+if risk_score > 0.62:
     # CRITICAL RISK → Immediate referral for Low-Dose CT (LDCT)
 elif risk_score > 0.40:
     # MODERATE RISK → Short-term follow-up (3–6 months)
