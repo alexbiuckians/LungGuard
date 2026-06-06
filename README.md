@@ -46,7 +46,7 @@ SHAP values tell you why this model ranked FEV1 as the strongest predictor. They
 The fairness audit audits the model's behavior across synthetic demographic splits. Whether that fairness holds on real clinical populations — where data collection bias, access disparities, and comorbidity patterns differ — is entirely unknown.
 
 **This has not been tested with clinicians.**
-No usability testing, workflow integration study, or clinical review has been conducted. The risk stratification thresholds (0.48, 0.75) are methodologically justified but not clinically validated. A real deployment would require IRB review, clinician co-design, and prospective outcome tracking.
+No usability testing, workflow integration study, or clinical review has been conducted. The risk stratification thresholds (0.48, 0.62) are methodologically justified but not clinically validated. A real deployment would require IRB review, clinician co-design, and prospective outcome tracking.
 
 
 ## Risk Stratification Logic
@@ -54,7 +54,7 @@ No usability testing, workflow integration study, or clinical review has been co
 ```python
 if risk_score > 0.62:
     # CRITICAL RISK → Immediate referral for Low-Dose CT (LDCT)
-elif risk_score > 0.40:
+elif risk_score > 0.48:
     # MODERATE RISK → Short-term follow-up (3–6 months)
 else:
     # LOW RISK → Routine annual screening
