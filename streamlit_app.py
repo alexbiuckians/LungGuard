@@ -46,9 +46,9 @@ st.set_page_config(
  
 # ── Helper: risk tier ─────────────────────────────────────────────────────────
 def get_tier(prob):
-    if prob > 0.75:
+    if prob > 0.62:
         return "CRITICAL", "danger", "#f85149", "Immediate referral for Low-Dose CT (LDCT)"
-    elif prob > 0.40:
+    elif prob > 0.48:
         return "MODERATE", "moderate", "#d29922", "Short-term follow-up (3–6 months)"
     else:
         return "LOW", "low", "#3fb950", "Routine annual screening"
