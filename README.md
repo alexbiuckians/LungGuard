@@ -39,7 +39,7 @@ When the dashboard projects that quitting smoking reduces risk by 18%, that is t
 
 **SHAP explains the model — not the disease.**
 
-SHAP values tell you why this model ranked FEV1 as the strongest predictor. They do not confirm that FEV1 causes lung cancer. The clinical alignment section shows the model's logic is coherent with medical literature — it does not validate the model's predictions against real patient outcomes.
+SHAP values tell you why this model ranked pack-years as the strongest predictor. They do not confirm that pack-years causes lung cancer. The clinical alignment section shows the model's logic is coherent with medical literature — it does not validate the model's predictions against real patient outcomes.
 
 **No subgroup validation on real populations.**
 
