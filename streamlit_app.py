@@ -404,9 +404,9 @@ SAMPLE_PATIENTS = {
         "air_pollution_index": 45, "radon_exposure": 0, "occupational_exposure": 0,
         "family_history_cancer": 0, "copd": 0, "asthma": 0, "previous_tb": 0,
         "chronic_cough": 0, "chest_pain": 0, "shortness_of_breath": 0, "fatigue": 1,
-        "xray_abnormal": 0, "bmi": 27, "oxygen_saturation": 96, "fev1_x10": 28,
-        "crp_level": 7, "exercise_hours_per_week": 3, "diet_quality": 3,
-        "alcohol_units_per_week": 8, "healthcare_access": 3, "education_years": 14,
+        "xray_abnormal": 0, "bmi": 27, "oxygen_saturation": 96, "fev1_x10": 32,
+        "crp_level": 5, "exercise_hours_per_week": 3, "diet_quality": 3,
+        "alcohol_units_per_week": 5, "healthcare_access": 3, "education_years": 14,
         "income_level": 3,
     },
     "🟢 Low-Risk Healthy (35F)": {
