@@ -398,7 +398,7 @@ SAMPLE_PATIENTS = {
         "alcohol_units_per_week": 10, "healthcare_access": 2, "education_years": 12,
         "income_level": 2,
     },
-    "🟡 Moderate-Risk Smoker (52M)": {
+    "🟡 Moderate-Risk Smoker (48M)": {
         "age": 48, "gender": 1, "smoker": 1,
         "pack_years": 6, "passive_smoking": 0,
         "air_pollution_index": 45, "radon_exposure": 0, "occupational_exposure": 0,
