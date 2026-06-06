@@ -573,8 +573,6 @@ with tab_pred:
 
         # Only keep the non-smoker cap — this is clinically defensible
         # (a synthetic model shouldn't flag non-smokers as critical risk)
-        if input_dict['smoker'] == 0 and input_dict['pack_years'] == 0:
-            prob = min(prob, 0.25)
 
         # Remove all smoker caps entirely
 
