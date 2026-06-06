@@ -486,8 +486,6 @@ with st.sidebar:
 input_dict = {
     "age": age, "gender": gender_val,
     "smoker": smoker_val,
-    "smoking_years":      smoking_years      if smoker else 0,
-    "cigarettes_per_day": cigarettes_per_day if smoker else 0,
     "pack_years":         pack_years         if smoker else 0,
     "passive_smoking": int(passive),
     "air_pollution_index": air_poll, 
@@ -1207,12 +1205,6 @@ with tab_whatif:
         with st.expander("🚬 Smoking Interventions", expanded=True):
             wif_smoker = st.toggle("Current/Former Smoker",
                                    value=bool(input_dict.get("smoker", 0)), key="wif_smoker")
-            wif_smoking_years = st.slider("Smoking Years", 0, 60,
-                                          input_dict.get("smoking_years", 0),
-                                          key="wif_smoking_years", disabled=not wif_smoker)
-            wif_cigs = st.slider("Cigarettes per Day", 0, 40,
-                                 input_dict.get("cigarettes_per_day", 0),
-                                 key="wif_cigs", disabled=not wif_smoker)
             wif_pack_years = st.slider("Pack-Years", 0, 100,
                                        input_dict.get("pack_years", 0),
                                        key="wif_pack_years", disabled=not wif_smoker)
@@ -1248,8 +1240,6 @@ with tab_whatif:
     cf_dict = {
         **input_dict,
         "smoker":                  int(wif_smoker),
-        "smoking_years":           wif_smoking_years if wif_smoker else 0,
-        "cigarettes_per_day":      wif_cigs          if wif_smoker else 0,
         "pack_years":              wif_pack_years     if wif_smoker else 0,
         "passive_smoking":         int(wif_passive),
         "radon_exposure":          int(wif_radon),
@@ -1349,7 +1339,6 @@ with tab_whatif:
     for feat, opt_val, label in SINGLE_INTERVENTIONS:
         test_dict = {**input_dict, feat: opt_val}
         if feat == "smoker" and opt_val == 0:
-            test_dict["cigarettes_per_day"] = 0
             test_dict["passive_smoking"] = 0    
         X_test = pd.DataFrame([[test_dict.get(f, 0) for f in features]], columns=features)
         new_p = float(model.predict_proba(X_test)[0][1])
