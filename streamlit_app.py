@@ -569,6 +569,13 @@ with tab_pred:
         if input_dict['smoker'] == 1 and input_dict['pack_years'] == 0:
             st.warning("⚠️ Invalid: A current/former smoker must have pack-years > 0. Please adjust.")
             st.stop()
+        max_possible_pack_years = ((input_dict['age'] - 16) * 20) / 20  # 1 pack/day max
+            if input_dict['smoker'] == 1 and input_dict['pack_years'] > max_possible_pack_years:
+                 st.warning(f"⚠️ Biologically inconsistent: A {input_dict['age']}-year-old cannot have "
+                          f"{input_dict['pack_years']} pack-years. "
+                          f"Maximum possible at this age is {int(max_possible_pack_years)}.")
+                 st.stop()
+
         prob = float(model.predict_proba(X_input)[0][1])
 
         # Only keep the non-smoker cap — this is clinically defensible
