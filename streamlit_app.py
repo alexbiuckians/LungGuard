@@ -398,7 +398,7 @@ SAMPLE_PATIENTS = {
         "alcohol_units_per_week": 10, "healthcare_access": 2, "education_years": 12,
         "income_level": 2,
     },
-    "🟡 Moderate-Risk Smoker (48M)": {
+    "🟡 Moderate-Risk Smoker (44M)": {
         "age": 44, "gender": 1, "smoker": 1,
         "pack_years": 4, "passive_smoking": 0,
         "air_pollution_index": 35, "radon_exposure": 0, "occupational_exposure": 0,
@@ -1157,6 +1157,10 @@ with tab_whatif:
     """)
 
     base_prob = float(model.predict_proba(X_input)[0][1])
+    if input_dict['smoker'] == 0 and input_dict['pack_years'] == 0:
+         base_prob = min(base_prob, 0.25)
+    if input_dict['smoker'] == 1 and input_dict['pack_years'] <= 20:
+         base_prob = min(base_prob, 0.58)
     base_tier, base_css, base_color, _ = get_tier(base_prob)
     # ── Top-of-tab: Best Case Summary Card ────────────────────────────────────────
     st.markdown("#### 🎯 Best-Case Risk Projection")
