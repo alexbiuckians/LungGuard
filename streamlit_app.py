@@ -521,7 +521,7 @@ st.markdown("""
 st.markdown("""
 <div class="header-strip">
   <div class="header-title">🫁 Lung Cancer Risk · XAI Clinical Dashboard</div>
-  <div class="header-sub">Logistic Regression · SHAP Explainability · GWU Data Science</div>
+  <div class="header-sub">Logistic Regression · SHAP Explainability · Counterfactual Engine</div>
 </div>
 """, unsafe_allow_html=True)
  
