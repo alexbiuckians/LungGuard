@@ -4,13 +4,13 @@
 
 ## Overview
 
-An end-to-end ML pipeline predicting individual lung cancer risk from 29 patient variables, with real-time SHAP explanations. A clinician sees not just **High Risk** but exactly **why** — which features are driving that prediction for that specific patient.
+A clinical decision support prototype that pairs real-time lung cancer risk scores with SHAP explanations and a counterfactual What-If engine — so a clinician sees not just a probability, but exactly why, and what a patient can do about it.
 
 ## The Problem This Solves
 
 Standard ML risk models give clinicians a number: 73% probability. That number
 
-is useless without context. A doctor can't act on a probability — they need to knowwhich factors are driving it, for this specific patient, right now.
+is useless without context. A doctor can't act on a probability — they need to know which factors are driving it, for this specific patient, right now.
 
 This project builds that missing layer. The dashboard predicts individual lung cancer
 
@@ -138,7 +138,7 @@ data-generating function rather than validated clinical weighting priorities.
 ```
 lung-cancer-risk/
 ├── data/
-│   └── lung_cancer.xlsx                        ← real dataset (not tracked in git)
+│   └── lung_cancer.xlsx                        ← synthetic dataset (not tracked in git)
 ├── app/
 │   ├── streamlit_app.py                        ← Phase 4: XAI clinical dashboard
 │   └── model/
@@ -207,5 +207,7 @@ precision and 100% recall on the held-out test set.
 
 `Python 3.10` · `scikit-learn` · `LightGBM` ·  `imbalanced-learn` · `SHAP` · `Streamlit` · `Optuna` · `pandas` · `numpy` · `matplotlib` · `seaborn` · `joblib` · `statsmodels`
 ---
+*Clinical decision support prototype demonstrating XAI methodology on research data. 
+Dataset: [Kaggle source / synthetic]. Not for clinical use.*
 *Clinical decision support prototype demonstrating XAI methodology on research data. 
 Dataset: [Kaggle source / synthetic]. Not for clinical use.*
