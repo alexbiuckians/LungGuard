@@ -1,7 +1,9 @@
-# Lung Cancer Risk Prediction — XAI Clinical Dashboard
+# LungGuard — XAI Clinical Decision Support
 
-> **Data Science** | Python · scikit-learn · LightGBM · SHAP · Streamlit
-
+> **Final Model: Logistic Regression** (outperformed LightGBM + Random Forest 
+> in 5-fold CV — see Key Design Decisions)  
+> `Python` · `scikit-learn` · `SHAP` · `Streamlit` · `Optuna`
+> 
 ## Overview
 
 A clinical decision support prototype that pairs real-time lung cancer risk scores with SHAP explanations and a counterfactual What-If engine — so a clinician sees not just a probability, but exactly why, and what a patient can do about it.
@@ -28,6 +30,17 @@ with ranked single-intervention impact so the highest-leverage behavior change i
 
 always surfaced first.
 
+
+## Key Design Decisions
+
+**Logistic Regression as final model** — head-to-head cross-validation showed Logistic Regression outperformed both Random Forest and LightGBM on F2 (0.9928 vs 0.9582) and AUC (0.9999 vs 0.9976). This is expected and honest: the synthetic data-generating function is fundamentally linear, so a linear model  wins. LightGBM remains in the pipeline as a benchmark comparison
+
+
+**F2 threshold tuning (0.48, not 0.5)** — the default 0.5 threshold 
+optimizes accuracy, which is the wrong goal in cancer screening. A missed 
+cancer is catastrophically more costly than a false alarm. The Precision-Recall 
+curve identified 0.48 as the threshold that maximizes F2, achieving 98.4% 
+precision and 100% recall on the held-out test set.
 
 ## Limitations
 **The data is synthetic — the metrics are not meaningful benchmarks.** 
@@ -88,6 +101,8 @@ streamlit run app/streamlit_app.py
 
 ## About This Project
 This project builds a clinically-reasoned, bias-audited ML decision support tool with full XAI explainability — including SHAP explanations, a counterfactual What-If engine, fairness auditing across demographic subgroups, and probability calibration. Built independently to demonstrate what  production-grade clinical ML actually looks like: not just a model, but a  complete pipeline from raw data to explainable, audited, deployable application.
+
+
 ## Implementation Evidence (5-fold Stratified CV)
 > ⚠️ These metrics reflect a synthetic dataset with a known data-generating 
 > process. They demonstrate methodology, not real-world predictive performance.
@@ -192,16 +207,7 @@ lung-cancer-risk/
 ├── requirements.txt
 └── README.md
 ```
-## Key Design Decisions
 
-**Logistic Regression as final model** — head-to-head cross-validation showed Logistic Regression outperformed both Random Forest and LightGBM on F2 (0.9928 vs 0.9582) and AUC (0.9999 vs 0.9976). This is expected and honest: the synthetic data-generating function is fundamentally linear, so a linear model  wins. LightGBM remains in the pipeline as a benchmark comparison
-
-
-**F2 threshold tuning (0.48, not 0.5)** — the default 0.5 threshold 
-optimizes accuracy, which is the wrong goal in cancer screening. A missed 
-cancer is catastrophically more costly than a false alarm. The Precision-Recall 
-curve identified 0.48 as the threshold that maximizes F2, achieving 98.4% 
-precision and 100% recall on the held-out test set.
 
 ## Tech Stack
 
