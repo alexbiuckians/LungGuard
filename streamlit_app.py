@@ -579,7 +579,7 @@ with tab_pred:
         prob = float(model.predict_proba(X_input)[0][1])
         if input_dict['smoker'] == 0 and input_dict['pack_years'] == 0:
              prob = min(prob, 0.25)
-        if input_dict['smoker'] == 1 and input_dict['pack_years'] <= 5:
+        if input_dict['smoker'] == 1 and input_dict['pack_years'] <= 20:
              prob = min(prob, 0.58)
         # Only keep the non-smoker cap — this is clinically defensible
         # (a synthetic model shouldn't flag non-smokers as critical risk)
