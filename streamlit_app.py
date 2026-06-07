@@ -543,14 +543,14 @@ with tab_pred:
             st.markdown("""
             <div style="background:#161b22;border:1px solid #21262d;border-radius:12px;padding:24px;">
               <div style="font-size:1.6rem;margin-bottom:8px;">📊</div>
-              <div style="font-weight:600;margin-bottom:6px;color:#e6edf3">29 Clinical Variables</div>
+              <div style="font-weight:600;margin-bottom:6px;color:#e6edf3">27 Clinical Variables</div>
               <div style="color:#8b949e;font-size:0.85rem;">Demographics, smoking history, environmental exposures, symptoms, and biomarkers</div>
             </div>""", unsafe_allow_html=True)
         with c2:
             st.markdown("""
             <div style="background:#161b22;border:1px solid #21262d;border-radius:12px;padding:24px;">
               <div style="font-size:1.6rem;margin-bottom:8px;">⚡</div>
-              <div style="font-weight:600;margin-bottom:6px;color:#e6edf3">LightGBM Model</div>
+              <div style="font-weight:600;margin-bottom:6px;color:#e6edf3">Logistic Regression</div>
               <div style="color:#8b949e;font-size:0.85rem;">Optimized with Optuna · F2-tuned threshold · 5-fold stratified CV</div>
             </div>""", unsafe_allow_html=True)
         with c3:
@@ -577,7 +577,8 @@ with tab_pred:
             st.stop()
 
         prob = float(model.predict_proba(X_input)[0][1])
-
+        if input_dict['smoker'] == 0 and input_dict['pack_years'] == 0:
+             prob = min(prob, 0.25)
         # Only keep the non-smoker cap — this is clinically defensible
         # (a synthetic model shouldn't flag non-smokers as critical risk)
 
