@@ -107,7 +107,7 @@ This project builds a clinically-reasoned, bias-audited ML decision support tool
 > ⚠️ These metrics reflect a synthetic dataset with a known data-generating 
 > process. They demonstrate methodology, not real-world predictive performance.
 | Metric | Score |
-|--------|-------|
+|--------|:-------|
 | ROC-AUC | **0.9999** |
 | F2-Score | **0.9928** |
 | MCC | **0.9795** |
