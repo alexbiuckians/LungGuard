@@ -214,6 +214,6 @@ lung-cancer-risk/
 `Python 3.10` · `scikit-learn` · `LightGBM` ·  `imbalanced-learn` · `SHAP` · `Streamlit` · `Optuna` · `pandas` · `numpy` · `matplotlib` · `seaborn` · `joblib` · `statsmodels`
 ---
 *Clinical decision support prototype demonstrating XAI methodology on research data. 
-Dataset: [Kaggle source / synthetic]. Not for clinical use.*
-*Clinical decision support prototype demonstrating XAI methodology on research data. 
-Dataset: [Kaggle source / synthetic]. Not for clinical use.*
+Dataset: https://www.kaggle.com/datasets/dhrubangtalukdar/lung-cancer-prediction-dataset. Not for clinical use.*
+
+
