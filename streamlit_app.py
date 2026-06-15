@@ -318,7 +318,7 @@ EXPLAINER_PATH = os.path.join(MODEL_DIR, "shap_explainer.pkl")
 META_PATH      = os.path.join(MODEL_DIR, "feature_meta.json")
 SLIDER_PATH    = os.path.join(MODEL_DIR, "slider_config.json")
  
-# Priority 1 & 3 output paths (optional — produced by phase6_calibration_fairness.py)
+# Priority 1 & 3 output paths (optional — produced by calibration_fairness.py)
 CAL_SUMMARY_PATH   = "outputs/calibration/P1_calibration_summary.json"
 CAL_CURVE_PATH     = "outputs/calibration/P1_calibration_curves.png"
 FAIRNESS_CSV_PATH  = "outputs/fairness/P3_subgroup_metrics.csv"
